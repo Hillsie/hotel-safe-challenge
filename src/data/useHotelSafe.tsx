@@ -83,7 +83,7 @@ const initialState = {
   isLocked: false,
   pinArray: [],
   pinValue: '',
-  sealedPin: '5638'
+  sealedPin: ''
 }
 
 function useHotelSafe(): any {

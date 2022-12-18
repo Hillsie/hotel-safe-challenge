@@ -1,5 +1,3 @@
-import * as React from 'react'
-
 import { Button, keyType } from '../Button/Button'
 
 import styles from './keyPad.module.scss'
@@ -18,12 +16,12 @@ const keyPadKeys = [
   { value: '0', key: '0' },
   { value: '⇒', key: 'ENTER' }
 ]
-
+// Todo: dispaly ⇒ not enter
 interface KeyPadProp {
   keyPadCB: (pinVal: string) => void
 }
 
-function KeyPad({ keyPadCB }: KeyPadProp): JSX.Element {
+function KeyPad ({ keyPadCB }: KeyPadProp): JSX.Element {
   return (
     <div className={styles.keyPadBorder}>
       <div className={styles.keyPadContainer}>

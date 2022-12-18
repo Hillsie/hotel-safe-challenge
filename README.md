@@ -1,3 +1,12 @@
+# Todo:
+
+[] - Rename master to main
+[]- Setup linting in package.json
+
+## React.FC discouraged
+
+https://github.com/facebook/create-react-app/pull/8177
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

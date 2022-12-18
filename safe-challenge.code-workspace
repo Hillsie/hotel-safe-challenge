@@ -1,0 +1,27 @@
+{
+  "folders": [
+    {
+      "path": "./",
+      "name": "safe-challenge"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.git": true,
+      "**/node_modules": true,
+      "**/dist": true
+    },
+    "editor.formatOnSave": true,
+    "debug.javascript.autoAttachFilter": "onlyWithFlag",
+    "eslint.validate": ["javascript", "javascriptreact", "html", "typescriptreact"]
+  },
+  "extensions": {
+    "recommendations": [
+      "streetsidesoftware.code-spell-checker",
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "aaron-bond.better-comments",
+      "dongido.sync-env"
+    ]
+  }
+}

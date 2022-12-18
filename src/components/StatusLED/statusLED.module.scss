@@ -1,0 +1,19 @@
+.statusLEDContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .statusLED {
+    border: 2px solid black;
+    background-color: #008100;
+    border-radius: 50%;
+    width: calc(4vmin);
+    height: calc(4vmin);
+    display: inline-flex;
+    flex-shrink: calc(90px + 2vmin);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: none;
+  }
+}

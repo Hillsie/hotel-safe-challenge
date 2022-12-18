@@ -1,0 +1,23 @@
+.buttonContainer {
+  display: inline-flex;
+  position: relative;
+  flex-shrink: calc(90px + 2vmin);
+  border-radius: 0px;
+  border: 0;
+  background-color: #ffff;
+  cursor: pointer;
+  &:active {
+    background-color: #d8d5d5;
+    opacity: 0.5;
+  }
+  &:hover {
+    opacity: 0.9;
+    transition: ease-in 0.1s;
+  }
+  .buttonLabel {
+    overflow: hidden;
+    width: calc(10vmin);
+    margin: calc(0.5vmin) auto;
+    font-size: calc(1px + 2vmin);
+  }
+}

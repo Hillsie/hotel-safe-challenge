@@ -1,0 +1,24 @@
+.safeChallengeContainer {
+  position: relative;
+  background-color: #6660;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  .safePanel {
+    display: grid;
+    grid-template-columns: 1fr 5% 1fr;
+    align-content: space-between;
+    background-color: #293f55;
+    border: 0.3rem solid white;
+    padding: 1.5% 2.5%;
+  }
+  .safeDisplay {
+    grid-column: 3/4;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 0.625rem;
+  }
+}

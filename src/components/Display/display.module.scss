@@ -1,0 +1,22 @@
+.displayContainer {
+  display: flex;
+  position: relative;
+  flex-shrink: calc(6rem + 2vmin);
+  .display {
+    border: 3px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.625rem;
+    width: 100%;
+    background-color: #9ea18b;
+    font-size: calc(0.8rem + 2vmin);
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently */
+    cursor: none;
+  }
+}

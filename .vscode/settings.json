@@ -1,0 +1,22 @@
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSaveMode": "file",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true,
+    "source.fixAll.eslint": true
+  },
+  "standard.enable": true,
+  "standard.engine": "ts-standard",
+  "standard.autoFixOnSave": true,
+  "standard.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.format.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true
+  },
+  "cSpell.words": ["dbaeumer", "Licence", "dongido","stylelint", "blockless"]
+}

@@ -16,7 +16,7 @@ const keyPadKeys = [
   { value: '0', key: '0' },
   { value: '⇒', key: 'ENTER' }
 ]
-// Todo: dispaly ⇒ not enter
+// Todo: display ⇒, not enter
 interface KeyPadProp {
   keyPadCB: (pinVal: string) => void
 }

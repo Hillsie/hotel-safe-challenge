@@ -10,6 +10,14 @@
     background-color: #d8d5d5;
     opacity: 0.5;
   }
+  &Active {
+    background-color: #d8d5d5;
+    opacity: 0.5;
+  }
+  &InActive {
+    background-color: #ffff;
+    opacity: 1;
+  }
   &:hover {
     opacity: 0.9;
     transition: ease-in 0.1s;

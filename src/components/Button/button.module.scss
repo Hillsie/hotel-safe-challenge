@@ -15,9 +15,24 @@
     transition: ease-in 0.1s;
   }
   .buttonLabel {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     width: calc(10vmin);
     margin: calc(0.5vmin) auto;
     font-size: calc(1px + 2vmin);
+    height: 100%;
+    cursor: pointer;
+    > input {
+      height: 100%;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      background-color: #ffff;
+    }
   }
 }

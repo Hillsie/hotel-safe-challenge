@@ -5,7 +5,6 @@
   width: 100%;
   .statusLED {
     border: 2px solid black;
-    background-color: #008100;
     border-radius: 50%;
     width: calc(4vmin);
     height: calc(4vmin);
@@ -15,5 +14,11 @@
     justify-content: center;
     overflow: hidden;
     cursor: none;
+  }
+  .locked {
+    background-color: #be0505;
+  }
+  .unLocked {
+    background-color: #008100;
   }
 }

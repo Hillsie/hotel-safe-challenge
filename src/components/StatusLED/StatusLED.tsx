@@ -1,8 +1,14 @@
+import clsx from 'clsx'
+
 import styles from './statusLED.module.scss'
-function StatusLED(): JSX.Element {
+interface StatusLEDProps {
+  isLocked: boolean
+}
+function StatusLED({ isLocked }: StatusLEDProps): JSX.Element {
+  const ledStyles = clsx(styles.statusLED, isLocked ? styles.locked : styles.unLocked)
   return (
     <div className={styles.statusLEDContainer}>
-      <div className={styles.statusLED} />
+      <div className={ledStyles} />
     </div>
   )
 }

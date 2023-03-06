@@ -3,32 +3,48 @@ import * as React from 'react'
 const deriveKeys = (keyVal: string): string => {
   switch (keyVal) {
     case 'Escape':
-      return 'clr'
+    case 'Backspace':
+    case 'Delete':
+      return 'CLR'
+    case 'Enter':
+      return 'ENTER'
     default:
       return keyVal
   }
 }
 
-const useKeyPressHook = (matchKey: string): boolean => {
+type KeyPressedHook = [boolean, string | undefined]
+
+const useKeyPressHook = (): KeyPressedHook => {
   const [state, setState] = React.useState(false)
+  const [debounce, setDebounce] = React.useState(false)
+  const [keyPressed, setKeyPressed] = React.useState<string | undefined>(undefined)
+
   React.useEffect(() => {
     const listener = (event: Event): void => {
       const { key } = event as KeyboardEvent
-      if (matchKey.toLowerCase() === deriveKeys(key).toLowerCase()) {
-        setState(true)
-      }
+
+      if (debounce) return
+      setKeyPressed(deriveKeys(key))
+      setState(true)
+      setDebounce(true)
     }
-    const resetlistener = (): void => {
+
+    const keyUpListener = (): void => {
+      setDebounce(false)
       setState(false)
+      setKeyPressed(undefined)
     }
 
     document.addEventListener('keydown', listener)
-    document.addEventListener('keyup', resetlistener)
+    document.addEventListener('keyup', keyUpListener)
+
     return () => {
       document.removeEventListener('keydown', listener)
-      document.removeEventListener('keyup', resetlistener)
+      document.removeEventListener('keyup', keyUpListener)
     }
-  }, [matchKey])
-  return state
+  }, [debounce, setDebounce])
+
+  return [state, keyPressed]
 }
 export { useKeyPressHook }

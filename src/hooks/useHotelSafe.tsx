@@ -12,12 +12,11 @@ interface SafeState {
   sealedPin: string
 }
 
-// Todo: use the pin as a clear state
-function hotelSafeReducer (state: SafeState, action: ActionInterface): any {
+function hotelSafeReducer (state: SafeState, action: ActionInterface): SafeState {
   const { type, pin } = action
   const { pinArray } = state
   let createPin: string[] = []
-  console.log(state)
+
   switch (type) {
     case 'USE_PIN': {
       if (pinArray.length < 4) {
@@ -85,8 +84,13 @@ const initialState = {
   pinValue: '',
   sealedPin: ''
 }
-// todo: need some sleep
-function useHotelSafe (): any {
+
+interface UseHotelSafeInterface {
+  state: SafeState
+  keyPadCB: (pinVal: string) => void
+}
+
+function useHotelSafe (): UseHotelSafeInterface {
   const [state, dispatch] = React.useReducer(hotelSafeReducer, { ...initialState })
 
   const keyPadCB = (pinVal: string): void => {
